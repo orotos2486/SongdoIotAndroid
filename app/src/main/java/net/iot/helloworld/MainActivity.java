@@ -47,5 +47,22 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("edittext",editText.getText().toString());
         startActivityForResult(intent,1);
     }
+    public void goToList(View view){
+        Intent intent = new Intent(MainActivity.this,ListViewActivity.class);
+        startActivity(intent);
+    }
+    public void goToScrollView(View view){
+        Intent intent = new Intent(MainActivity.this,ScrollViewActivity.class);
+        startActivity(intent);
+    }
+    public void startNaverOpenAPIActivity(View view){
+        Intent intent = new Intent(MainActivity.this,NaverOpenAPIActivity.class);
+        startActivity(intent);
+    }
+
+    public void startDaumOpenAPIActivity(View view){
+        Intent intent = new Intent(MainActivity.this,DaumOpenAPIActivity.class);
+        startActivity(intent);
+    }
 
 }

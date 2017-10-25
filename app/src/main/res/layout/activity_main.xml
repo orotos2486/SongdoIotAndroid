@@ -27,5 +27,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn1"/>
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext"
+        android:text="ListView"
+        android:onClick="goToList"
+        />
+    <Button
+        android:id="@+id/scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnList"
+        android:text="ScrollView"
+        android:onClick="goToScrollView"/>
+    <Button
+        android:id="@+id/naver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll1"
+        android:text="Naver"
+        android:onClick="startNaverOpenAPIActivity"
+        />
+    <Button
+        android:id="@+id/daum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/naver"
+        android:text="Daum"
+        android:onClick="startDaumOpenAPIActivity"
+        />
+
 
 </RelativeLayout>
