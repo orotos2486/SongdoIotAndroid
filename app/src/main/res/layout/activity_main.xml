@@ -58,6 +58,13 @@
         android:text="Daum"
         android:onClick="startDaumOpenAPIActivity"
         />
+    <Button
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daum"
+        android:text="map"
+        android:onClick="startGoogleMap"/>
 
 
 </RelativeLayout>

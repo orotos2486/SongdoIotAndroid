@@ -72,6 +72,21 @@ public class NaverOpenAPIActivity extends AppCompatActivity {
             postdateText.setText(itemList.get(position).postdate);
             descriptionText.setText(Html.fromHtml(itemList.get(position).description));
             bloggernameText.setText(itemList.get(position).bloggername);
+            final int pos= position;
+            titleText.setOnClickListener(new View.OnClickListener(){
+
+                public void onClick(View v){
+                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(itemList.get(pos).link));
+                    startActivity(intent);
+                }
+            });
+            bloggernameText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(itemList.get(pos).bloggerlink));
+                    startActivity(intent);
+                }
+            });
             return view;
         }
     }
@@ -149,13 +164,13 @@ public class NaverOpenAPIActivity extends AppCompatActivity {
                 BlogAdapter adapter = new BlogAdapter(NaverOpenAPIActivity.this);
                         ListView listView = (ListView)findViewById(listview);
                         listView.setAdapter(adapter);
-                        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(itemList.get(position).link));
                                 startActivity(intent);
                             }
-                        });
+                        });*/
                // Toast.makeText(NaverOpenAPIActivity.this,items.length()+" ",Toast.LENGTH_LONG).show();
         }catch(Exception e){
                 e.printStackTrace();
