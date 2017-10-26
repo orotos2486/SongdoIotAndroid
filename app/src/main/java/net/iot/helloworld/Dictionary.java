@@ -18,8 +18,8 @@ public class Dictionary extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table "+TABLE_NAME + "(" + "_id integer PRIMARY KEY autoincrement."
-                + WORD + " text." + DEFINITION + " text)";
+        String sql = "create table "+TABLE_NAME + "(" + "_id integer PRIMARY KEY autoincrement,"
+                + WORD + " text," + DEFINITION + " text)";
         try{
             db.execSQL(sql);
         }catch(Exception e){e.printStackTrace();}

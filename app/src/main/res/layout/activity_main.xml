@@ -65,6 +65,21 @@
         android:layout_below="@id/daum"
         android:text="map"
         android:onClick="startGoogleMap"/>
+    <Button
+        android:id="@+id/db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map"
+        android:text="DB"
+        android:onClick="startDB"/>
+    <Button
+        android:id="@+id/sensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/db"
+        android:text="sensor"
+        android:onClick="startSensor"/>
+
 
 
 </RelativeLayout>

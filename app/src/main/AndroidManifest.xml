@@ -48,7 +48,8 @@
         <activity android:name=".NaverOpenAPIActivity" />
         <activity android:name=".DaumOpenAPIActivity" />
         <activity android:name=".GoogleMapActivity" />
-        <activity android:name=".SQLiteDataActivity"></activity>
+        <activity android:name=".SQLiteDatabaseActivity" />
+        <activity android:name=".SensorActivity"></activity>
     </application>
 
 </manifest>

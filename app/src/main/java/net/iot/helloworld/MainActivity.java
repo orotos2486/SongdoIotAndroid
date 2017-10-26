@@ -3,6 +3,7 @@ package net.iot.helloworld;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startGoogleMap(View view){
         Intent intent = new Intent(MainActivity.this,GoogleMapActivity.class);
+        startActivity(intent);
+    }
+    public void startDB(View view){
+        Intent intent = new Intent(MainActivity.this,SQLiteDatabaseActivity.class);
+        startActivity(intent);
+    }
+    public void startSensor(View view){
+        Intent intent = new Intent(MainActivity.this,SensorActivity.class);
         startActivity(intent);
     }
 
